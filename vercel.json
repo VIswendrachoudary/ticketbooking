@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build -w frontend",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/src/index.ts"
+    },
+    {
+      "source": "/health",
+      "destination": "/backend/src/index.ts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
