@@ -3,6 +3,11 @@ node_modules/
 backend/node_modules/
 frontend/node_modules/
 
+# Lockfiles (Let Vercel perform clean install)
+package-lock.json
+backend/package-lock.json
+frontend/package-lock.json
+
 # Builds
 dist/
 frontend/dist/
