@@ -7,9 +7,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"",
-    "build": "cd frontend && npm run build",
-    "build:frontend": "cd frontend && npm run build",
-    "build:backend": "cd backend && npm run build"
+    "build": "node -e \"if (require('fs').existsSync('frontend')) { require('child_process').execSync('cd frontend && npm run build', {stdio: 'inherit'}); } else { require('child_process').execSync('npx vite build', {stdio: 'inherit'}); }\""
   },
   "devDependencies": {
     "autoprefixer": "^10.5.4",
