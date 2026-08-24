@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"",
-    "build": "node -e \"if (require('fs').existsSync('frontend')) { require('child_process').execSync('cd frontend && npm run build', {stdio: 'inherit'}); } else { require('child_process').execSync('npx vite build', {stdio: 'inherit'}); }\""
+    "build": "node -e \"if (require('fs').existsSync('backend')) { require('child_process').execSync('cd backend && npx prisma generate', {stdio: 'inherit'}); } if (require('fs').existsSync('frontend')) { require('child_process').execSync('cd frontend && npm run build', {stdio: 'inherit'}); } else { require('child_process').execSync('npx vite build', {stdio: 'inherit'}); }\""
   },
   "devDependencies": {
     "autoprefixer": "^10.5.4",
