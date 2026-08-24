@@ -43,7 +43,7 @@ An ultra-premium, high-concurrency ticket booking platform for movies and concer
 4. Configure Build Settings:
    - **Framework Preset**: Vite
    - **Root Directory**: `./` (leave blank/default)
-   - **Build Command**: `npm run build -w frontend`
+   - **Build Command**: `cd frontend && npm run build`
    - **Output Directory**: `frontend/dist`
 5. Add Environment Variables:
    - `DATABASE_URL`: `file:./dev.db` (or PostgreSQL connection URL)
